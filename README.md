@@ -1,0 +1,2 @@
+# Aminoacid
+Cursed image compressor
