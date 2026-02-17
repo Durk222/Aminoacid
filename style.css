@@ -1,0 +1,134 @@
+:root {
+    --amino-green: #00FC96;
+    --amino-dark: #1F2125;
+    --amino-darker: #121212;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--amino-darker);
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--amino-dark);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 252, 150, 0.1);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--amino-green);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--amino-green);
+    text-shadow: 0 0 10px rgba(0, 252, 150, 0.5);
+}
+
+.upload-zone {
+    border: 2px dashed #444;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.upload-zone:hover {
+    border-color: var(--amino-green);
+    background: rgba(0, 252, 150, 0.05);
+}
+
+.canvas-container {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+canvas {
+    display: none; /* Trabajamos en el canvas, mostramos en img */
+}
+
+#previewImage {
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--amino-green);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--amino-green);
+    color: var(--amino-darker);
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.1s;
+}
+
+button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
+    padding: 10px 20px;
+    color: var(--amino-green);
+    font-weight: bold;
+    border: 1px solid var(--amino-green);
+}
+
+.hidden { display: none; }
