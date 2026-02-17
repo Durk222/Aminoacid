@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aminoacid: Compresor de imágenes.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>AMINOACID</h1>
+            <p>¡Destruye tus imágenes aquí!</p>
+        </header>
+
+        <main>
+            <div class="upload-zone" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <p>Toca o arrastra una imagen para infectarla</p>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="processCanvas"></canvas>
+                <img id="previewImage" src="" alt="Vista previa radioactiva">
+                <div id="loader" class="hidden">COMPRIMIENDO...</div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="infectionRange">Nivel de Infección (Iteraciones): <span id="iterValue">0</span></label>
+                    <input type="range" id="infectionRange" min="0" max="50" value="0" step="1">
+                </div>
+
+                <div class="control-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="watermarkCheck">
+                        <span class="checkmark"></span>
+                        Añadir Marca de Agua
+                    </label>
+                </div>
+
+                <button id="downloadBtn" disabled>GUARDAR OBRA DE ARTE</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
